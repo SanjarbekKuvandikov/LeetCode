@@ -5,7 +5,7 @@ class RemoveElement {
             if (nums[i] != val) {
                 nums[cnt] = nums[i];
                 cnt++;
-
+//5
             }
         }
         return cnt;
