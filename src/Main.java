@@ -7,9 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner in =new Scanner(System.in);
         int mas [] = {1,2,0,0};
+         /*
        Solution989 sol = new Solution989();
         System.out.println(sol.addToArrayForm(mas,34));
-    /* Solution sol=new Solution();
+   Solution sol=new Solution();
         System.out.println(sol.lengthOfLastWord(" sanjar"));*/
       /* Solution20 sol20 = new Solution20();
        System.out.println(sol20.isValid("([]}{)"));
