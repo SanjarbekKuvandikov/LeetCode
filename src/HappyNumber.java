@@ -20,5 +20,6 @@ public class HappyNumber {
             n /= 10;
         }
         return sum;
+
     }
 }
