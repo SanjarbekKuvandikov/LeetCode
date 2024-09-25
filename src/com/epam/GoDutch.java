@@ -16,6 +16,7 @@ public class GoDutch {
             money += ((money * 10)/100);
             money = money/friends;
             System.out.println(money);
+
         }
     }
 }
