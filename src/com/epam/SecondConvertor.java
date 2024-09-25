@@ -1,4 +1,4 @@
-package notleet;
+package com.epam;
 
 public class SecondConvertor {
     public String convertor(int sec){
