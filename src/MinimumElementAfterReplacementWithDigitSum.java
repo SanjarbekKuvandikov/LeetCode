@@ -1,4 +1,4 @@
-public class TheTwoSneakyNumbersDigitville {
+public class MinimumElementAfterReplacementWithDigitSum {
     public int minElement(int[] nums) {
         int min = circle(nums[0]);
 
