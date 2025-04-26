@@ -21,7 +21,6 @@ public class FindCommonElementsBetweenTwoArrays {
             }
         }
 
-
         answer[0] = (answerOne);
         answer[1] = (answerTwo);
         return answer;
