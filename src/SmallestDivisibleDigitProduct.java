@@ -20,4 +20,5 @@ public class SmallestDivisibleDigitProduct {
 
         return result;
     }
+
 }
