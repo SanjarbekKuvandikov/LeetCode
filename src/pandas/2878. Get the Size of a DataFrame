@@ -1,0 +1,8 @@
+from typing import List
+import pandas as pd
+
+def getDataframeSize(players: pd.DataFrame) -> List[int]:
+    shape = players.shape
+    return list(shape)
+
+     5  5
