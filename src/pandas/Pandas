@@ -1,0 +1,131 @@
+🔢 1. head(), tail() – birinchi yoki oxirgi qatorlarni olish
+python
+Copy
+Edit
+df.head(5)   # birinchi 5 qator
+df.tail(3)   # oxirgi 3 qator
+
+📋 2. info() va describe() – umumiy tahlil
+python
+Copy
+Edit
+df.info()         # ustunlar, turlari, non-null count
+df.describe()     # statistik tahlil (faqat raqamli ustunlar uchun)
+
+📑 3. rename() – ustun yoki index nomini o‘zgartirish
+python
+Copy
+Edit
+df.rename(columns={'eski': 'yangi'}, inplace=True)
+
+✏️ 4. assign() – yangi ustun qo‘shish
+python
+Copy
+Edit
+df = df.assign(new_column=df['col'] * 2)
+
+📌 5. astype() – ma'lumot turini o‘zgartirish
+python
+Copy
+Edit
+df['col'] = df['col'].astype(int)
+df = df.astype({'col1': int, 'col2': float})
+
+🚫 6. dropna() – NaN qiymatlarni o‘chirish
+python
+Copy
+Edit
+df.dropna()               # barcha NaN bo‘lgan qatorlarni olib tashlaydi
+df.dropna(subset=['col']) # faqat shu ustun bo‘yicha
+
+🧩 7. fillna() – NaN qiymatlarni to‘ldirish
+python
+Copy
+Edit
+df.fillna(0)                     # barcha NaN ni 0 bilan
+df['col'] = df['col'].fillna('no value')
+
+➕ 8. concat() – DataFrame'larni birlashtirish
+python
+Copy
+Edit
+pd.concat([df1, df2], axis=0)   # pastga
+pd.concat([df1, df2], axis=1)   # yonma-yon
+
+🔁 9. merge() – ikki DataFrame'ni birlashtirish (SQL join)
+python
+Copy
+Edit
+pd.merge(df1, df2, on='id', how='inner')
+how= qiymatlari: inner, left, right, outer
+
+🔍 10. query() – filterlash (sodda ifoda bilan)
+python
+Copy
+Edit
+df.query("age > 20 and gender == 'male'")
+
+🔎 11. loc[] va iloc[] – index asosida qator/ustun tanlash
+python
+Copy
+Edit
+df.loc[0]             # 0-chi qator
+df.loc[0, 'name']     # 0-chi qator, 'name' ustuni
+df.iloc[2, 1]         # 2-chi qator, 1-chi ustun (raqamli index)
+
+🔃 12. groupby() – guruhlash va tahlil
+python
+Copy
+Edit
+df.groupby('gender')['salary'].mean()
+
+✅ 13. drop() – ustun yoki qatorni o‘chirish
+python
+Copy
+Edit
+df.drop('age', axis=1)              # ustunni o‘chirish
+df.drop([0, 1], axis=0)             # 0 va 1-chi qatorlarni o‘chirish
+
+🔤 14. sort_values() – tartiblash
+python
+Copy
+Edit
+df.sort_values(by='age', ascending=True)
+
+🧮 15. value_counts() – qiymatlar soni
+python
+Copy
+Edit
+df['gender'].value_counts()
+
+🧪 16. apply() – funksiya qo‘llash
+python
+Copy
+Edit
+df['salary'].apply(lambda x: x * 2)
+
+📊 17. pivot_table() – pivot jadval yaratish
+python
+Copy
+Edit
+df.pivot_table(values='salary', index='department', aggfunc='mean')
+
+🗃 18. unique() va nunique() – noyob qiymatlar
+python
+Copy
+Edit
+df['col'].unique()     # noyob qiymatlar
+df['col'].nunique()    # noyob qiymatlar soni
+
+📈 19. cumsum(), cumprod(), diff() – statistik funksiyalar
+python
+Copy
+Edit
+df['sales'].cumsum()      # yig‘indi
+df['sales'].diff()        # farqlar
+
+📆 20. to_datetime() – sana formatiga o‘tkazish
+python
+Copy
+Edit
+df['date'] = pd.to_datetime(df['date'])
