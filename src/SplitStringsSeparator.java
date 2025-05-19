@@ -5,6 +5,7 @@ public class SplitStringsSeparator {
     public List<String> splitWordsBySeparator(List<String> words, char separator) {
         List<String> result = new ArrayList<>();
 
+
         for (String word : words){
             StringBuilder str = new StringBuilder();
             for (int i = 0; i < word.length(); i++){
@@ -13,7 +14,7 @@ public class SplitStringsSeparator {
                 }else {
                     if (!str.isEmpty()){
                         result.add(str.toString());
-                        str.setLength(0);
+                    str.setLength(0);
                 }
                 }
             }
@@ -23,7 +24,6 @@ public class SplitStringsSeparator {
             }
 
         }
-
 
 
         return result;
