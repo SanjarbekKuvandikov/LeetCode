@@ -8,7 +8,8 @@ public class FirstLetterAppearTwice {
             if (!set.add(c)){
                 return c;
             }
-        } 
+        }
+
         return ' ';
     }
 }
