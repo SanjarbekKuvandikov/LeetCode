@@ -1,24 +1,19 @@
 public class LargestOddNumberString {
     public String largestOddNumber(String num) {
-        int a = Integer.parseInt(num);
-        int b = one(num);
-
-        if (a % 2 == 1 && b % 2 == 1){
-            return String.valueOf(Math.max(a,b));
-        }else if (a % 2 == 1){
-            return String.valueOf(a);
-        }else if (b % 2 == 1) {
-            return String.valueOf(b);
+        StringBuilder str = new StringBuilder();
+        int len = 1;
+        while (len <= num.length()){
+            String sub = num.substring(0,len);
+            int last = sub.length() - 1;
+            int number = Integer.parseInt(String.valueOf(sub.charAt(last)));
+            if (number % 2 == 1){
+                if (str.length() < sub.length()){
+                    str.setLength(0);
+                    str.append(sub);
+                }
+            }
+            len++;
         }
-
-        return "";
-    }
-    private int one(String num){
-        int odd = 0;
-        for (char c : num.toCharArray()){
-            int n = Integer.parseInt(String.valueOf(c));
-            if (n % 2 == 1) odd = n;
-        }
-        return odd;
+        return str.toString();
     }
 }
